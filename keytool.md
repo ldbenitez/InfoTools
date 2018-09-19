@@ -13,7 +13,7 @@ keytool -genkey -alias mydomain -keyalg RSA -keystore keystore.jks -keysize 2048
 keytool -certreq -alias mydomain -keystore keystore.jks -file mydomain.csr
 
 ### Import a root or intermediate CA certificate to an existing Java keystore
-keytool -import -trustcacerts -alias root -file Thawte.crt -keystore keystore.jks
+keytool -import -trustcacerts -alias root -file rootorintermediate.crt -keystore keystore.jks
 
 ### Import a signed primary certificate to an existing Java keystore
 keytool -import -trustcacerts -alias mydomain -file mydomain.crt -keystore keystore.jks
